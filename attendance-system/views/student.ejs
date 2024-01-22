@@ -1,0 +1,49 @@
+<%- include ('partials/header') %>
+
+    <body>
+        <% if (locals.studentName) { %>
+            <h1>Welcome
+                <%= studentName %>.
+                    Please mark your attendance
+            </h1>
+            <% } %>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" id="but1">
+                                Choose Subject
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"
+                                        onclick="change('Engineering Mechanics')">Engineering
+                                        Mechanics</a></li>
+                                <!-- <li><a class="dropdown-item" href="#" onclick="change('Physics')">Physics</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="change('Chemistry')">Chemistry</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="change('Maths')">Maths</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="change('English')">English</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="in col-md-6">
+                        <input id="in1" class="dis" type="text" id="invisibleTextBox">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="in col-md-6">
+                        <button id="but2" class="dis">Submit</button>
+                    </div>
+                </div>
+
+                <% if (locals.bool) { %>
+                    <% if (bool) { %>
+                        <h4>Your attendance has been marked</h4>
+                        <% } else { %>
+                            <h4>The code is invalid or expired</h4>
+                            <% } %>
+                                <% } %>
+
+                                    <%- include ('partials/footer') %>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Student ERP</title>
+    <link rel="stylesheet" href="https://temp.staticsave.com/65aba085e503a.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <% if (locals.firstName) { %>
+        <h1 class="">Welcome
+            <%= firstName %>.
+                Please mark your attendance
+        </h1>
+        <% } %>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" id="but1">
+                            Choose Subject
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="change('Engineering Mechanics')">Engineering
+                                    Mechanics</a></li>
+                            <!-- <li><a class="dropdown-item" href="#" onclick="change('Physics')">Physics</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="change('Chemistry')">Chemistry</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="change('Maths')">Maths</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="change('English')">English</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="in col-md-6">
+                    <form action="/student/submit" method="post">
+                        <input name="enteredOtp" id="in1" class="dis" type="text" id="invisibleTextBox">
+                        <div class="row">
+                            <div class="in col-md-6">
+                                <button id="but2" class="dis">Submit</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+
+
+            
+                                <script src="https://temp.staticsave.com/65ab92185b8a8.js"></script>
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                                <script
+                                    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+                                <script
+                                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                                    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                                    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
